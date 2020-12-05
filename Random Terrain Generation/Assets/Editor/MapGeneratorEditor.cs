@@ -13,13 +13,13 @@ public class MapGeneratorEditor : Editor {
         // Se algum valor mudou - atualiza automaticamente quando algum dos valroes do inspector muda
         if (DrawDefaultInspector()) {
             if (mapGen.autoUpdate) {
-                mapGen.GenerateMap();
+                mapGen.DrawMapInEditor();
             }
         }
 
         // Button generate a map
         if (GUILayout.Button("Generate")) {
-            mapGen.GenerateMap();
+            mapGen.DrawMapInEditor();
         }
     }
 }
